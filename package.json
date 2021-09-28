@@ -1,0 +1,22 @@
+{
+  "name": "waifu",
+  "version": "1.0.0",
+  "description": "Discord bot for weeb servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiborKoderman/WaiFU.git"
+  },
+  "author": "xeoqs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiborKoderman/WaiFU/issues"
+  },
+  "homepage": "https://github.com/TiborKoderman/WaiFU#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
