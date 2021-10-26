@@ -4,7 +4,7 @@
   "description": "Discord bot for weeb servers",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
+    "test": "node index.js",
     "deploycmd":"node deploy-commands.js"
   },
   "repository": {

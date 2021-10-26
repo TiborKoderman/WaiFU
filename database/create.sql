@@ -8,6 +8,7 @@ create table member_of_guild(
     member_id BIGINT,
     guild_id BIGINT,
     xp int not null,
+    social_credit int not null,
     admin boolean default false,
     owner boolean default false,
     

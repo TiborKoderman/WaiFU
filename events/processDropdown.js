@@ -1,15 +1,15 @@
 module.exports = {
     name: `interactionCreate`,
     async execute(interaction) {
-        //if (!interaction.isButton()) return;
+        if (!interaction.isSelectMenu()) return;
 
         //console.log(interaction);
         //console.log(`in`);
 
         switch (interaction.customId) {
-            case `selfRole`:
+            case `createselfrole`:
                 //const role = interaction.guild.roles.cache.find(r=>r.name==interaction.);
-                const role = interaction.value;
+                const role = interaction.member.roles.cache.some(r => r.id === role.id);
                 console.log(role)
                 //console.log(interaction.member.roles.cache.some(r => r.id === role.id));
                 //console.log(interaction.member.roles.some(role => role.name === 'Group Watch'));
@@ -31,10 +31,6 @@ module.exports = {
                 break;
         }
 
-        // if(interaction.customId === "toggleGroupWatch"){
-        //     console.log(`in`);
-        //     await interaction.reply();
-        //     await interaction.message.channel.send("button green")
-        // }
+
     },
 };
