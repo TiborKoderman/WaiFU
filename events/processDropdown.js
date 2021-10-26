@@ -3,19 +3,17 @@ module.exports = {
     async execute(interaction) {
         if (!interaction.isSelectMenu()) return;
 
-        //console.log(interaction);
-        //console.log(`in`);
-
         switch (interaction.customId) {
-            case `createselfrole`:
+            case `SelfRole`:
                 //const role = interaction.guild.roles.cache.find(r=>r.name==interaction.);
-                const role = interaction.member.roles.cache.some(r => r.id === role.id);
-                console.log(role)
+                const role = interaction.guild.roles.cache.find(r => r.id === interaction.values[0]);
+                //console.log(`selected role:`, role)
+                //console.log(`interaction: `, interaction.values[0])
                 //console.log(interaction.member.roles.cache.some(r => r.id === role.id));
                 //console.log(interaction.member.roles.some(role => role.name === 'Group Watch'));
-                if(!interaction.member.roles.cache.some(r => r.id === role.value)){
+                if(!interaction.member.roles.cache.some(r => r.id === role.id)){
                     interaction.member.roles.add(role);
-                    await interaction.reply({content:`given role`, ephemeral: true});
+                    await interaction.reply({content:`given role${role.name}`, ephemeral: true});
                 }
                 else{
                     interaction.member.roles.remove(role);

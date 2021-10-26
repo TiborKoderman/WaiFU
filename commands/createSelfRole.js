@@ -31,12 +31,6 @@ module.exports = {
                         .addOptions(allRoles)
                 )
                 
-            // .addComponents(
-            //     new MessageButton()
-            //     .setCustomId(`toggleGroupWatch`)
-            //     .setLabel(`Group Watch`)
-            //     .setStyle(`PRIMARY`)
-            // ); 
             
             
             //await interaction.channel.send({content: `Click here to add or remove your role`, components: [row], ephemeral:true })
